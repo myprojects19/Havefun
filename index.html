@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspireMee: Daily Quotes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+
+    <button id="mode-toggle" class="icon-button" aria-label="Toggle light/dark mode">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <div class="container">
+        <div id="quote-card" class="quote-card">
+            <div id="quote-text">Loading quote...</div>
+            <div id="quote-author">- Author</div>
+        </div>
+
+        <div class="controls">
+            <button id="new-quote-btn">New Quote</button>
+            <button id="bookmark-btn" class="icon-button" aria-label="Bookmark quote">
+                <i class="far fa-heart"></i> <!-- Outline heart -->
+            </button>
+            <button id="copy-btn" class="icon-button" aria-label="Copy quote to clipboard">
+                 <i class="far fa-copy"></i>
+            </button>
+             <button id="download-btn" class="icon-button" aria-label="Download quote as image">
+                <i class="fas fa-download"></i>
+            </button>
+        </div>
+
+         <div id="copy-feedback" class="copy-feedback">Copied!</div>
+
+    </div>
+
+    <div class="saved-quotes-section">
+         <h2>Bookmarked Quotes</h2>
+         <div id="saved-quotes-list">
+             <!-- Saved quotes will be rendered here by JS -->
+         </div>
+    </div>
+
+
+    <!-- html2canvas library for image download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="code.js"></script>
+</body>
+</html>
